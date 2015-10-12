@@ -6,8 +6,11 @@ public class IslandCollision : MonoBehaviour {
 
     public void loadIsland(string level) {
         Debug.Log("Collider name" + level);
-        if(level == "LavaIsland" || level =="GreenIsland" || level == "IceIsland" || level == "BeachIsland")
+        if (level == "LavaIsland" || level == "GreenIsland" || level == "IceIsland" || level == "BeachIsland")
+        {
+            Data.lastIsland = level;
             Application.LoadLevel(level);
+        }
         if (level == "0 - Background")
         {
             triggerMe();
