@@ -23,9 +23,19 @@ public class Data : MonoBehaviour {
 	public static int adjustedDifficulty;
 	public static bool hitBack;
     public static int currentDifficulty;
+    public static string lastIsland;
+
+    public static bool preserveMilMission;
+    public static bool preserveSciMission;
+    public static bool preserveEspMission;
+    public static bool preserveDipMission;
+    public static Mission lastMilMission;
+    public static Mission lastSciMission;
+    public static Mission lastEspMission;
+    public static Mission lastDipMission;
 
 
-	void Awake(){
+    void Awake(){
 		//--------------------------------------CHARACTER CREATION SECTION-------------------------------------------//
 		//instantiate and add to list all your characters (we probably need to do this for each single one, so copy paste!)
 		Character c;
@@ -347,9 +357,10 @@ public class Data : MonoBehaviour {
 		diplomacyResCount = 0;
 		adjustedDifficulty = 0;
 		needCharacter = false;
-		hitBack = false;
-		//this allows it to persist (don't delete please)
-		DontDestroyOnLoad (transform.gameObject);
+        preserveMilMission = false;
+        preserveSciMission = false;
+        //this allows it to persist (don't delete please)
+        DontDestroyOnLoad (transform.gameObject);
 	}
 
 	//shuffle method

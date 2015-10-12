@@ -12,6 +12,10 @@ public class deployButton : MonoBehaviour {
         if ((Data.pickedMission.squadSize - Data.currentCrewSize) == 0)
         {
             Data.hitBack = false;                //so new characters can be added once again
+            Data.preserveMilMission = false;
+            Data.preserveSciMission = false;
+            Data.preserveEspMission = false;
+            Data.preserveDipMission = false;
             Application.LoadLevel(level);
         }
         else
