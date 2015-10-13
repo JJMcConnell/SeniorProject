@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class missionDescription : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
+
+		Data.currentCharDesc.isPicked = false;    //make sure that the isPicked isn't still flagged from crew menu
+
 		//select the description of the mission picked
 		string missionDesc = Data.pickedMission.description;
 		Text guiText = GameObject.Find("Description").GetComponent<Text>();
 		guiText.text = Data.pickedMission.title + "\n" + missionDesc;
-
 
 
         /*
