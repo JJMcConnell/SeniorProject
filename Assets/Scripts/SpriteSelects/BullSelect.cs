@@ -7,19 +7,27 @@ public class BullSelect : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
-		int i;
-		for (i = 0; i < Data.currentChars.Count; i++) {
-			if (Data.currentChars [i].charName == "Sitting Bull") 
-				break;
-		}
-		if (Data.currentChars [i] != Data.currentCharDesc) {
-			GameObject.Find ("Sitting Bull").GetComponent<SpriteRenderer> ().color = Color.white;
+    // Update is called once per frame
+    void Update()
+    {
+        /*
+        bool available = false;
+        int i;
+        for (i = 0; i < Data.currentChars.Count; i++)
+        {
+            if (Data.currentChars[i].charName == "Artemis the Wolf")
+            {
+                available = true;
+                break;
+            }
+        }
+        if (available && (Data.currentChars[i] != Data.currentCharDesc))
+        {
+            GameObject.Find ("Sitting Bull").GetComponent<SpriteRenderer> ().color = Color.white;
 			Data.currentChars [i].isPicked = false;
 		}
+        */
 	}
 	
 	void OnMouseDown(){
@@ -28,6 +36,7 @@ public class BullSelect : MonoBehaviour {
 
 
 		if (Data.onCrewScene) {
+
 			int i;
 			for (i = 0; i < Data.currentChars.Count; i++) {
 				if (Data.currentChars [i].charName == "Sitting Bull") {

@@ -8,6 +8,7 @@ public class missionDescription : MonoBehaviour {
 	void Start () {
 
 		Data.currentCharDesc.isPicked = false;    //make sure that the isPicked isn't still flagged from crew menu
+        Data.onCrewScene = false;
 
 		//select the description of the mission picked
 		string missionDesc = Data.pickedMission.description;

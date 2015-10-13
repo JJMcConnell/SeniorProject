@@ -33,7 +33,6 @@ public class cameraMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Debug.Log("Hot Dogs. 2" + triggered);
         var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         lastVelocity = 40.0f;
         var deltaX = (target.transform.position.x - transform.position.x) / lastVelocity;
