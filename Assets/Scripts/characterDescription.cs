@@ -8,7 +8,10 @@ public class characterDescription : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        if (Data.characterSelected)
+            Data.currentCharDesc.isPicked = false;
         Data.onCrewScene = true;
+        Data.hitBack = true;   //the only way to exit the scene is to hit back, so this works here.
 
         for (int i = 0; i < Data.charList.Count; i++) {
 			GameObject.Find (Data.charList [i].charName).GetComponent<SpriteRenderer> ().color = Color.gray;
@@ -19,7 +22,7 @@ public class characterDescription : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        bool charSelected = false;
+        Data.characterSelected = false;
 
         Text guiText = GameObject.Find("Description").GetComponent<Text>();
 
@@ -27,12 +30,12 @@ public class characterDescription : MonoBehaviour {
         {
             if (Data.currentChars[i].isPicked)
             {
-                charSelected = true;
+                Data.characterSelected = true;
                 break;
             }
         }
 
-        if (charSelected)
+        if (Data.characterSelected)
         {
             string characterDesc = Data.currentCharDesc.description;
             guiText.text = Data.currentCharDesc.charName + "\n" + characterDesc + "\nExperience: " + Data.currentCharDesc.experience;

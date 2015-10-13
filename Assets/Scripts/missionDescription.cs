@@ -7,7 +7,8 @@ public class missionDescription : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        if(Data.currentCharDesc != null)
+
+        if(Data.characterSelected)
 		    Data.currentCharDesc.isPicked = false;    //make sure that the isPicked isn't still flagged from crew menu
         Data.onCrewScene = false;
 
