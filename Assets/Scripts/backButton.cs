@@ -25,8 +25,11 @@ public class backButton : MonoBehaviour {
                 break;
         }
 
-        for (int i=0; i<Data.currentCrewSize; i++)
-			Data.activeMissionChars [i].setPicked ();
+        for (int i=0; i<Data.currentCrewSize; i++) {
+			//Data.activeMissionChars [i].setPicked ();
+			//this was previously not setting the isPicked to false correctly, causing issues with increasing max crew size
+			Data.activeMissionChars[i].isPicked = false;
+		}
 		Data.activeMissionChars.Clear ();
 		Data.currentCrewSize = 0;
 		Application.LoadLevel(Data.lastIsland);
