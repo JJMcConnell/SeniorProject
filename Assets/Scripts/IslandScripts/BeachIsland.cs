@@ -58,8 +58,18 @@ public class BeachIsland : MonoBehaviour
         if (tempList2.Count == 0)
         {
             GameObject.Find("SciButton1").GetComponent<UnityEngine.UI.Button>().enabled = false;
-            GameObject.Find("MilButton1").GetComponent<UnityEngine.UI.Button>().colors = new UnityEngine.UI.ColorBlock() { normalColor = Color.gray };
+            GameObject.Find("SciButton1").GetComponent<UnityEngine.UI.Button>().colors = new UnityEngine.UI.ColorBlock() { normalColor = Color.gray };
         }
+		if (tempList3.Count == 0)
+		{
+			GameObject.Find("EspButton1").GetComponent<UnityEngine.UI.Button>().enabled = false;
+			GameObject.Find("EspButton1").GetComponent<UnityEngine.UI.Button>().colors = new UnityEngine.UI.ColorBlock() { normalColor = Color.gray };
+		}
+		if (tempList4.Count == 0)
+		{
+			GameObject.Find("DipButton1").GetComponent<UnityEngine.UI.Button>().enabled = false;
+			GameObject.Find("DipButton1").GetComponent<UnityEngine.UI.Button>().colors = new UnityEngine.UI.ColorBlock() { normalColor = Color.gray };
+		}
     }
 
     // Update is called once per frame
