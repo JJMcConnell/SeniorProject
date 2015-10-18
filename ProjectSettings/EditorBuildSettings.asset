@@ -41,3 +41,5 @@ EditorBuildSettings:
     path: Assets/Scenes/GreenIsland.unity
   - enabled: 1
     path: Assets/Scenes/IceIsland.unity
+  - enabled: 1
+    path: Assets/Scenes/CrewScene.unity

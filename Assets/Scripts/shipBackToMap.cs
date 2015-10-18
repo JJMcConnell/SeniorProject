@@ -9,14 +9,20 @@ public class shipBackToMap : MonoBehaviour
     public void LoadMap(string level)
     {
         Data.hitBack = true;
+
+        if(Data.preserveMilMission)
+            Data.lastMilMission.isListed = false;
+        if(Data.preserveSciMission)
+            Data.lastSciMission.isListed = false;
+        if(Data.preserveEspMission)
+            Data.lastEspMission.isListed = false;
+        if(Data.preserveDipMission)
+            Data.lastDipMission.isListed = false;
         Data.preserveMilMission = false;
         Data.preserveSciMission = false;
         Data.preserveEspMission = false;
         Data.preserveDipMission = false;
-        Data.lastMilMission.isListed = false;
-        Data.lastSciMission.isListed = false;
-        Data.lastDipMission.isListed = false;
-        Data.lastEspMission.isListed = false;
+
         //loadingImage.SetActive(true);
         Application.LoadLevel(level);
     }

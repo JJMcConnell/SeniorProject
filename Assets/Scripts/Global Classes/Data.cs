@@ -34,6 +34,9 @@ public class Data : MonoBehaviour {
     public static Mission lastEspMission;
     public static Mission lastDipMission;
 
+	public static bool onCrewScene;
+	public static Character currentCharDesc;
+    public static bool characterSelected;
 
     void Awake(){
 		//--------------------------------------CHARACTER CREATION SECTION-------------------------------------------//
@@ -359,6 +362,8 @@ public class Data : MonoBehaviour {
 		needCharacter = false;
         preserveMilMission = false;
         preserveSciMission = false;
+		onCrewScene = false;
+        characterSelected = false;
         //this allows it to persist (don't delete please)
         DontDestroyOnLoad (transform.gameObject);
 	}

@@ -7,7 +7,8 @@ public class resourceTracker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		string m = Data.militaryResCount.ToString();
+        
+        string m = Data.militaryResCount.ToString();
 		string s = Data.scienceResCount.ToString();
 		string e = Data.espionageResCount.ToString();
 		string d = Data.diplomacyResCount.ToString();
