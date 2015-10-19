@@ -1308,6 +1308,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 5.5
       objectReference: {fileID: 0}
+    - target: {fileID: 136380, guid: b97e17b16c9d85d449bb30cc8de7ed33, type: 2}
+      propertyPath: m_Name
+      value: Sitting Bull
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5879466, guid: b97e17b16c9d85d449bb30cc8de7ed33, type: 2}
     - {fileID: 11456114, guid: b97e17b16c9d85d449bb30cc8de7ed33, type: 2}
