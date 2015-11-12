@@ -13,7 +13,7 @@ public class Mission : MonoBehaviour{
 	public string majorDis;
 	public string minorDis;
 	public int successChance;
-	public int difficulty;    //1 = easy, 2 = medium, 3 = hard
+	public int difficulty;    //1 = easy, 2 = medium, 3 = hard, 4 = hardest
 	public string type;
 	public Resource rewardRsc;
 	public string rewardChar;
