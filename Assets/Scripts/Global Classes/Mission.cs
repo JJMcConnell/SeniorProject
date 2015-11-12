@@ -56,7 +56,8 @@ public class Mission : MonoBehaviour{
 
 
 	//adjusting difficulty of missions based on daycounter
-
+	//Removing since changes to game progression
+		/*
 		if (Data.dayCounter <= 7) {
 			switch (mission.difficulty) {
 			case 1:
@@ -81,6 +82,7 @@ public class Mission : MonoBehaviour{
 					break;
 				}
 		}
+		*/
 
 		for (int i = 0; i < mission.squadSize; i++) {    
 

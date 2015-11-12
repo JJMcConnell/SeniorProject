@@ -8,7 +8,7 @@ public class IceIsland : MonoBehaviour
     void Start()
     {
 
-        Data.currentDifficulty = 2;
+        Data.currentDifficulty = 3;
         Debug.Log("The current mission difficulty is " + Data.currentDifficulty);
 
 		System.Collections.Generic.List<Mission> tempList1 = new System.Collections.Generic.List<Mission>();
