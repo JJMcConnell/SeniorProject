@@ -46,6 +46,7 @@ public class Mission : MonoBehaviour{
 		this.isDone = isDone;
 
 	}
+
 	public bool runMission(Mission mission, List<Character> charList){
 		double chance = 55;
 
@@ -84,6 +85,7 @@ public class Mission : MonoBehaviour{
 		}
 		*/
 
+        //exp bonuses
 		for (int i = 0; i < mission.squadSize; i++) {    
 
 			switch (Data.adjustedDifficulty)
@@ -107,7 +109,8 @@ public class Mission : MonoBehaviour{
 					chance -= 17 / mission.squadSize;
 				break;
 			}
-
+            
+            //class bonuses
 			if (charList [i].profession == mission.majorAd)
 				chance += 33 / mission.squadSize;
 			if (charList [i].profession == mission.minorAd)
