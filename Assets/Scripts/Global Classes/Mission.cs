@@ -13,7 +13,7 @@ public class Mission : MonoBehaviour{
 	public string majorDis;
 	public string minorDis;
 	public int successChance;
-	public int difficulty;    //1 = easy, 2 = medium, 3 = hard
+	public int difficulty;    //1 = easy, 2 = medium, 3 = hard, 4 = hardest
 	public string type;
 	public Resource rewardRsc;
 	public string rewardChar;
@@ -46,6 +46,7 @@ public class Mission : MonoBehaviour{
 		this.isDone = isDone;
 
 	}
+
 	public bool runMission(Mission mission, List<Character> charList){
 		double chance = 55;
 
@@ -56,7 +57,8 @@ public class Mission : MonoBehaviour{
 
 
 	//adjusting difficulty of missions based on daycounter
-
+	//Removing since changes to game progression
+		/*
 		if (Data.dayCounter <= 7) {
 			switch (mission.difficulty) {
 			case 1:
@@ -81,7 +83,9 @@ public class Mission : MonoBehaviour{
 					break;
 				}
 		}
+		*/
 
+        //exp bonuses
 		for (int i = 0; i < mission.squadSize; i++) {    
 
 			switch (Data.adjustedDifficulty)
@@ -105,7 +109,8 @@ public class Mission : MonoBehaviour{
 					chance -= 17 / mission.squadSize;
 				break;
 			}
-
+            
+            //class bonuses
 			if (charList [i].profession == mission.majorAd)
 				chance += 33 / mission.squadSize;
 			if (charList [i].profession == mission.minorAd)

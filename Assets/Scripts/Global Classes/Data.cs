@@ -43,7 +43,7 @@ public class Data : MonoBehaviour {
 		//instantiate and add to list all your characters (we probably need to do this for each single one, so copy paste!)
 		Character c;
 		//MILITARY CHARACTERS
-		c = new Character ("Military", "Sitting Bull", Resources.Load("MilitaryTiger.prefab") as Sprite, 0, 1,
+		c = new Character ("Military", "Sitting Bull", Resources.Load("Mil1 Portrait") as Sprite, 0, 1,
 		                   "Leader of the great tribes.", false);
 		currentChars.Add (c);
 		c = new Character ("Military", "Sun Tzu the Tiger", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
@@ -171,19 +171,19 @@ public class Data : MonoBehaviour {
 		m = new Mission ("The Tides of March", "A young man approaches your ship seeking mercenaries. His uncle, the emperor, was murdered by a group of his best friends, and he desires vengeance. He's willing to pay for your assistance. Send some warriors to help his cause!",
 						 "The opposing leaders, at the sight of your warriors, killed themselves in despair. Their sole surviving leader fled on a small boat. All in all, the victory was pretty effortless.", 
 						 "Your band of mercernaries was routed! The enemy leaders, believing the day to be lost, killed themselves pretty early in the battle. Their much-more-intelligent lieutenants took command and turned the tide of the battle.",
-						 3, "Military", "Science", "Espionage", "Diplomacy", 85, 1, "Military", m5, "None", false, false);
+						 3, "Military", "Science", "Espionage", "Diplomacy", 85, 3, "Military", m5, "None", false, false);
         militaryList.Add (m);
 
 		m = new Mission ("The Fallen Colossus", "As you approach the nearby island, a large statue overseeing their harbor tumbles into the ocean with a thunderous groan. The natives blame you for the misfortune, and demand you send some burly crew members to help clear the wreckage. Or at least help them repair the broken statue.",
 						 "Your crew toils late into the night, but the wreckage has been dredged from the harbor and the restoration work is already well underway. This society has produced some surprisingly advanced engineers. As thanks, they share some of their knowledge with you.",
 						 "Your weary crew tries to assist with the recovery efforts, but the statue previously overlooking the harbor was too large and complex for them to handle. Embarassed for you, the natives ask you politely to leave while they clean up the mess.",
-						 4, "Military", "Science", "Espionage", "Diplomacy", 60, 2 , "Military", m4, "None", false, false);
+						 4, "Military", "Science", "Espionage", "Diplomacy", 60, 4 , "Military", m4, "None", false, false);
         militaryList.Add (m);
 
 		m = new Mission ("Do Well", "A local hero from the island approaches your ship and demands that you send her someone to fight. For too long she has lived amongst the weaklings on this island. Now that you're here, she hopes you can alleviate her ennui.",
 						 "The duel lasts the majority of the afternoon, neither combatant willing to give the other an inch. Striking surely and swiftly, your crew member smiles as the village's hero finally falls. The villagers shower your crew in gold and the deck of your ship is carpeted in roses.",
 						 "The local hero makes quick work of your crew member. Smirking, the hero watches as they slink back to your ship, defeated.",
-						 1, "Military", "Espionage", "Diplomacy", "Science", 40, 3, "Military", m6, "None", false, false);
+						 1, "Military", "Espionage", "Diplomacy", "Science", 40, 1, "Military", m6, "None", false, false);
         militaryList.Add (m);
 
 		m = new Mission ("Live at Folsom Prison", "It has been a while since you've been able to stop and restock your supplies. As your ship sails onward an island is spotted in the distance. You use your spyglass to get a closer look. You see concrete towers and walls, a brutalistic monument to an era where laws were still enforced. Approaching the shore you notice smoke pouring into the sky and the decayed state of the infastructure. A man in an orange jumpsuit flags you down, but his disposition isn't the friendliest. You must arrange a party to meet him.", "You send a party to parley with the man. Apparently, having spent years in the correctional facility has rehabilitated the islands residents. The former felons have formed a utopian society. After hosting a feast in your honor, the ex-cons wish you luck on your journey, and send you off with food for the journey ahead.",
@@ -207,12 +207,12 @@ public class Data : MonoBehaviour {
 							"alien universe they visited and helped them come back with some equipment.", 
 							"After waiting for what seems like forever for your crew members to return from the portal you are worried that they may never come back. However, as the day almost closes and you are " +
 							"about to give up you see a bright spark come from the portal. All of a sudden your members are thrown out of the portal. It seems like they don't remember anything that just happened to them. They must have been brain wiped before they were kicked out.",
-							 2, "Science", "Espionage", "Military", "Diplomacy", 80, 1, "Science", s1, "None", false, false);
+							 4, "Science", "Espionage", "Military", "Diplomacy", 80, 4, "Science", s1, "None", false, false);
 		scienceList.Add (m);
 		m = new Mission("Drill Baby Drill", "You hear a rumor that a mining company in the sector is trying to station a refinery on a  nearby gas giant and are having trouble stabilizing it's ocean platform. One of your advisors suggest that we could be rewarded if we help them solve their problem",
 						 "Your crew realizes there are fluctuations due to an anomoly from an underwater vent. By accounting for this, the refinery was stabilized and the mining company's representative thanks you for your help.",
 						 "Your crew couldn't come up with a solution and the mining company had to call in help from their holding company. They thank you for your efforts, despite the lack of progress, but you recieve no reward. ",
-						  1, "Science", "Espionage", "Military", "Diplomacy", 60, 2, "Science", s2, "None", false, false);
+						  1, "Science", "Espionage", "Military", "Diplomacy", 60, 1, "Science", s2, "None", false, false);
         scienceList.Add (m);
 		m = new Mission("Don't Poison Me, Bro!", "A strange, purple liquid is found oozing out of a nearby water source. This gives rise to a rumor that poison is being pumped into the water supply and many people become outraged. " + 
 						 "However, it is up to you to investigate and figure out what is going on.", "After running some tests in the lab, you come to find that the substance found in the water supply is completely harmless. In fact, " + 
@@ -225,25 +225,25 @@ public class Data : MonoBehaviour {
 						 "You realize the light being emitted came from a small disco party being held within the nearby dormant volcano. They explain that the explosion formed when they started throwing around some " + 
 						 "old rocks they found lying around the floor. Intrigued, you decide to stay and study the properties of this \"dormant\" volcano.", 
 						 "After exploring for a while, you realize the area is in the way of multiple, dangerous magnetic fields. All of your equipment is damaged!",
-						  3, "Science", "Diplomacy", "Military", "Espionage", 60, 2, "Science", s4, "None", false, false);
+						  3, "Science", "Diplomacy", "Military", "Espionage", 60, 3, "Science", s4, "None", false, false);
 
         scienceList.Add (m);
 		m = new Mission("No! Not the Trees!", "It might just be a trick of the light, but it looks like the trees on that island are moving! They appear to be advancing towards a city. Maybe we could learn something by studying their biology.",
 						 "The figures turned out to indeed be a race of sentient trees. This planet is truly alien. Their technology was surprisingly advanced, and they shared some schematics with the crew. You could learn much from them.",
 						 "The figures were an army of warriors disguised as trees! They attacked our group and drove us back to the ship. Apparently, they were attempting to sack the city while it was unaware.",
-						 2, "Science", "Military", "Diplomacy", "Espionage", 40, 3, "Science", s5, "None", false, false);
+						 2, "Science", "Military", "Diplomacy", "Espionage", 40, 2, "Science", s5, "None", false, false);
 
         scienceList.Add (m);
 		m = new Mission("Buffalo buffalo buffalo", "The buffalo that live on one side of this island seem much more robust than those that live on the other side. As a result, they often bully the other buffalo. See if you can find out what makes them so much stronger. The information may prove useful in the future.",
 						"It turns out that their large size is due mainly to and earnest work ethic and clean living. That, and the abundance of growth hormones in the grass on their side of the island. You collect some samples of the grass.", 
 						"The larger buffalo buffalo your crew as well. After roughing them up and hanging their underwear from a flagpole, they allow your crew to return to the ship, defeated.",
-						3, "Science", "Military", "Espionage", "Diplomacy", 60, 2, "Science", s5, "None", false, false);
+						3, "Science", "Military", "Espionage", "Diplomacy", 60, 3, "Science", s5, "None", false, false);
 
         scienceList.Add (m);
 		m = new Mission("Zombo Combo", "The island nearby seems to be embroiled in war. As you approach the beach, you receive a transmission asking for scientists to help cure the madness plaguing some citizens. Or perhaps someone to investigate the source of the problem.",
 						"After tracking down the source of the madness: a virus introduced into the town's water source, your crew and the town's scientists work feverishly to develop a cure. The town is saved, and your crew has gained much medical knowledge.",
 						"The madness seems to be transmissable through the air. The entire island seems to be overcome with insanity. Your crew manages to escape, but just barely.",
-						2, "Science", "Espionage", "Diplomacy", "Military", 40, 3, "Science", s6, "None", false, false);
+						2, "Science", "Espionage", "Diplomacy", "Military", 40, 2, "Science", s6, "None", false, false);
 
         scienceList.Add (m);
 		m = new Mission("Gravity Well", "Your ship seems mysteriously drawn towards the island nearby. Preliminary readings reveal some sort of gravitational anomaly. Send some crew members to investigate the phenomenon.", 
@@ -264,24 +264,24 @@ public class Data : MonoBehaviour {
 		m = new Mission("Go Fish", "An undercover agent, Q, selects you to man a secret mission that will involve wiretapping a nearby successful fishing boat in order to listen in on secret information that will help you in the long run. Are you up for it?",
 						 "You successfully listen in on many conversations aboard the neighboring ship without being caught. Now you know a cornucopia of secrets about fishing and the citizens of your planet won't starve. Yay!",
 						 "You accidentally mixed up the wiring and got completely mixed up signals. Looks like you should have picked some better spies for this mission, buddy. Maybe next time!",
-						 3, "Espionage", "Diplomacy", "Science", "Military", 70, 1, "Espionage", e2, "None", false, false);
+						 4, "Espionage", "Diplomacy", "Science", "Military", 70, 4, "Espionage", e2, "None", false, false);
 
         espionageList.Add (m);
 		m = new Mission("Gone Baby", "A baby is dropped on the doorstep of your ship. Whose baby is this? Where did it come from? Where will it go? You must try to find the reason for this random baby at once!", 
 						 "With your investigation taking place at once, you come to realize this \"baby\" is really a small woman in disguise! She is flabbergasted by your sleuthing skills and awards you a small sum of money. She would have gotten away with it if it weren't for you pesky kids!",
 						 "Before you figure out the secret of the baby, it's too late. You realize the baby is a small SPY woman in disguise and she steals top secret information before she escapes!",
-						 2, "Espionage", "Diplomacy", "Science", "Military", 77, 1, "Espionage", e3, "None", false, false);
+						 2, "Espionage", "Diplomacy", "Science", "Military", 77, 3, "Espionage", e3, "None", false, false);
 
         espionageList.Add (m);
 		m = new Mission("Clamlet", "\"Clamlet... Clamlet...\" A ghost has appeared on the ship, calling out someone's name. He's pretty spooky with all that moaning! He wants someone to kill the king of that island nearby. Who cares why? Just do it and maybe he'll go away!",
 						 "You dispatch the king and manage to grab some gold and jewels from his bedchamber. Disappearing in a puff of green smoke, the ghost leaves more ectoplasm-covered gold on the deck of your ship. ",
 						 "You manage to infiltrate the castle, but stumble into the backstage of the king's theater. Unfortunately for you, an acting troupe is in the middle of a performance! Dragged onto the stage, you act your heart out, but receive only jeers and rotten tomatoes for your efforts.",
-						 1, "Espionage", "Military", "Diplomacy", "Science", 40, 3, "Espionage", e4, "None", false, false);
+						 1, "Espionage", "Military", "Diplomacy", "Science", 40, 1, "Espionage", e4, "None", false, false);
 
         espionageList.Add (m);
 		m = new Mission("The Fair's Fair Fare", "You hear an announcement on the nearby island that a science fair will be held at their kingdom's captial. There is sure to be some innovative machines there for showcase. By hook or by crook, getting some of those schematics would be invaluable.", "Armed with only your wits, a pair of stage glasses, and a white coat, you sneak into the science fair and grab a few conveniently rolled-up blueprints. Your scientists will surely appreciate your efforts.",
 						"You rush into the science fair pavillion and grab some rolled-up papers, assuming them to be schematics of some sort. Unfortunately, when you get back to the ship, you realize they are just rolls of paper towels! Better luck next time.",
-						1, "Espionage", "Science", "Military", "Diplomacy", 60, 2, "Espionage", e5, "None", false, false);
+						1, "Espionage", "Science", "Military", "Diplomacy", 60, 1, "Espionage", e5, "None", false, false);
 
         espionageList.Add (m);
 		m = new Mission("Dog Day Afternoon", "There's talk that the island's coffers are overflowing with food. Surely no one would mind if some of that food were to go missing?",
@@ -308,7 +308,7 @@ public class Data : MonoBehaviour {
 		m = new Mission("Grill Baby Grill", "You see a smoke signal from a nearby island, as you approach you see a group of fishermen grilling fish. They don't seem hostile.",
 						 "Your crew members approach the fishermen and are given a friendly welcome. You make a remark about a school of fish you came across on your way here. In return they offer you some fish to take back to the ship with you.",
 						 "There was almost a confrontation between the fishermen and your crew. You were asked to promptly leave, in order to avoid the situation you withdraw.",
-						 2, "Diplomacy", "Science", "Military", "Espionage", 80, 1, "Diplomacy", d1, "None", false, false);
+						 2, "Diplomacy", "Science", "Military", "Espionage", 80, 2, "Diplomacy", d1, "None", false, false);
 
         diplomacyList.Add (m);
 		m = new Mission("We're Not in Kansas Anymore", "A ship crashes into your planet, but nothing comes out of it for an hour. After another hour passes, you see a figure trying to climb out of the ship. You decide to send some of your crew over to see what is going on.",
@@ -320,7 +320,7 @@ public class Data : MonoBehaviour {
 		m = new Mission("It's All Greek to Me", "A sealed capsule is uncovered near an ancient ruin in the middle of a desert island. You manage to open it, and find only a slip of paper with the message \"ØƔʤϱϔҨ\" marked upon it. You must figure out what this means!", 
 						 "After sleuthing around various ruins, you find the same message encrypted into a wall on a neighboring island. With the help of the local villagers, you realize the message states \"we come in peace.\" The makers of the message are long gone, but the local villagers now trust you. Woo!",
 						 "You cannot figure out what the message says, no matter what you do. But it doesn't matter, because before you can guess that the message means \"stay away\" a ninja clan swoops out of nowhere and attacks! AH!", 
-						 2, "Diplomacy", "Espionage", "Military", "Science", 60, 2, "Diplomacy", d3, "None", false, false);
+						 3, "Diplomacy", "Espionage", "Military", "Science", 60, 4, "Diplomacy", d3, "None", false, false);
 
         diplomacyList.Add (m);
 		m = new Mission("A Tail of Two Kiddies", "It appears the two tribes on this island are preparing to go to war. Preliminary investigations reveal that one of the chieftain's sons has eloped to be with the other's daughter. Perhaps if you negotiate peace, they will reward us in some way. Or maybe it'd be better for everyone if the kids just... went away.", 
@@ -338,19 +338,19 @@ public class Data : MonoBehaviour {
 		m = new Mission("WILL You Help Out?", "As you land on the island, a messenger brings a missive to the ship. A noble has passed away recently and his family seeks an impartial party to execute his will. They promise a just reward for your service.",
 						"You read over his will and execute it to the letter. Reasonably, his wife and eldest son get the lion's share of his goods. While his younger children would wish for a larger inheritance, they accept your adjudication.",
 						"Each of his children attempted to bribe you to rule in their favor. Failing that, they hired thugs to force your hand. You managed to escape unscathed, but have received no recompense for your troubles.",
-						1, "Diplomacy", "Science", "Espionage", "Military", 60, 2, "Diplomacy", d6, "None", false, false);
+						1, "Diplomacy", "Science", "Espionage", "Military", 60, 1, "Diplomacy", d6, "None", false, false);
 
         diplomacyList.Add (m);
 		m = new Mission("Green Vs Blue", "The residents of the nearby island are in love with the local horse races. They are so fanatic, in fact, that a recent upset at one of the races has led to widespread rioting in the capital. Their emperor has attempted to pass some laws in order to quell their rage, but he has decided to seek a powerful orator to calm the crowds. Alternately, perhaps the crowds would disperse if they were met with armed resistance...",
 						"After delivering a moving speech extolling the virtues of good sportsman and enjoying the game with your fellow citizens, you have successfully calmed the enraged citizens. Thankful for your assistance, the emperor lavishes you with gifts.",
 						"The citizens' love for horse racing truly runs deep! Your attempts to remind them, \"It's just a sport... It doesn't really matter,\" have just driven them into a frothing madness. You barely manage to escape their gibbering wrath.",
-						1, "Diplomacy", "Military", "Science", "Espionage", 60, 2, "Diplomacy", d7, "None", false, false);
+						1, "Diplomacy", "Military", "Science", "Espionage", 60, 1, "Diplomacy", d7, "None", false, false);
 
         diplomacyList.Add (m);
 		m = new Mission("Foxanne", "A young officer from a local militia comes to the ship with an unusual request. He is desperate to win the heart of his neighbor, but fears that his skill for poetry isn't sufficient. His friends also lack a certain... je ne sais quoi. If you could help him win her heart, he would be forever greatful. After some prodding, he mentions that she's also a fan of nerdy types.",
 						"After detailing an elaborate plan in which you hide in the bushes below his neighbor's window and feed him lines to win her heart. Thankful for your assistance, he gives you some weapons from his militia's armory.",
 						"Despite your best efforts, the young man is flustered and delivers your lines with poor timing and ends up running away.",
-						2, "Diplomacy", "Science", "Military", "Espionage", 40, 3, "Diplomacy", d8, "None", false, false);
+						2, "Diplomacy", "Science", "Military", "Espionage", 40, 2, "Diplomacy", d8, "None", false, false);
         diplomacyList.Add (m);
 
 		dayCounter = 1;

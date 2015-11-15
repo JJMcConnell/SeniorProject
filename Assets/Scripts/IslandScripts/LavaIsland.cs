@@ -6,7 +6,7 @@ public class LavaIsland : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        Data.currentDifficulty = 3;
+        Data.currentDifficulty = 4;
         Debug.Log("The current mission difficulty is " + Data.currentDifficulty);
 
 		System.Collections.Generic.List<Mission> tempList1 = new System.Collections.Generic.List<Mission>();
