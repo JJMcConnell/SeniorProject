@@ -91,24 +91,31 @@ public class Mission : MonoBehaviour{
 			switch (Data.adjustedDifficulty)
 			{
 			case 1:
-				if (charList [i].experience > 1000)
+				if (charList [i].experience >= 1000)
 					chance += 33 / mission.squadSize;
-				else if (charList [i].experience > 500)
+				else if (charList [i].experience >= 500)
 					chance += 17 / mission.squadSize;
 				break;
 			case 2:
-				if (charList [i].experience < 501)
+				if (charList [i].experience < 500)
 					chance -= 17 / mission.squadSize;
-				if (charList [i].experience > 1000)
+				if (charList [i].experience >= 1000)
 					chance += 17 / mission.squadSize;
 				break;
 			case 3:
-				if (charList [i].experience < 501)
+				if (charList [i].experience < 500)
 					chance -= 33 / mission.squadSize;
-				else if (charList [i].experience < 1001)
+				else if (charList [i].experience < 1000)
 					chance -= 17 / mission.squadSize;
 				break;
-			}
+            case 4:
+                if (charList[i].experience < 1000)
+                    chance -= 33 / mission.squadSize;
+                else if (charList[i].experience < 1500)
+                    chance -= 17 / mission.squadSize;
+                break;
+
+            }
             
             //class bonuses
 			if (charList [i].profession == mission.majorAd)

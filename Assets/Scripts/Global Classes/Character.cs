@@ -6,7 +6,7 @@ public class Character : MonoBehaviour {
 	public string profession;    
 	public string charName;     
 	public Sprite sprite;
-	public double experience; //Lvl 1: 0 - 500; Lvl 2: 501 - 1000; Lvl 3: 1001 - 1500
+	public float experience; //Lvl 1: 0 - 499; Lvl 2: 500 - 999; Lvl 3: 1000 - 1499; Lvl 4: 1500+
 	public int status;        //0 = Dead, 1 = alive, 2 = injured
 	public string description;
 	public bool isPicked;
@@ -15,7 +15,7 @@ public class Character : MonoBehaviour {
 		//empty constructor
 	}
 
-	public Character(string profession, string charName, Sprite sprite, double experience, int status, string description, bool isPicked) {
+	public Character(string profession, string charName, Sprite sprite, int experience, int status, string description, bool isPicked) {
 		this.profession = profession;
 		this.charName = charName;
 		this.sprite = sprite;

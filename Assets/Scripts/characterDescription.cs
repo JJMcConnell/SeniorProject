@@ -16,6 +16,9 @@ public class characterDescription : MonoBehaviour {
         for (int i = 0; i < Data.charList.Count; i++) {
 			GameObject.Find (Data.charList [i].charName).GetComponent<SpriteRenderer> ().color = Color.gray;
         }
+
+
+
 	
 	}
 	

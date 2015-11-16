@@ -19,10 +19,29 @@ public class failText : MonoBehaviour {
 		
 		Text guiText2 = GameObject.Find("SquadList").GetComponent<Text> ();
 		string names = "";
-		for (int i = 0; i<Data.activeMissionChars.Count; i++) {
-			Data.activeMissionChars [i].addExperience (100);
-			names += Data.activeMissionChars [i].charName + " +100 XP \n";
-			Data.activeMissionChars[i].setPicked();
+
+
+        float totalLevel = 0;
+        int level;
+        for (int i = 0; i < Data.activeMissionChars.Count; i++)
+        {
+            float x = (Data.activeMissionChars[i].experience / 500);
+            level = (int)(1 + x);
+            Debug.Log("Level is: " + level);
+            totalLevel += level;
+        }
+
+
+        float adjustment = ((Data.adjustedDifficulty * Data.activeMissionChars.Count) / totalLevel);
+        if (adjustment > 1)
+            adjustment = 1;
+
+        int expGain;
+        expGain = (int)(50 * (adjustment));
+        for (int i = 0; i<Data.activeMissionChars.Count; i++) {
+			Data.activeMissionChars [i].addExperience (expGain);
+            names += Data.activeMissionChars[i].charName + " +" + expGain + "XP\n";
+            Data.activeMissionChars[i].setPicked();
 		}
 		
 		guiText2.text = names;
