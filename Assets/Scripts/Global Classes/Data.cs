@@ -47,52 +47,52 @@ public class Data : MonoBehaviour {
 		c = new Character ("Military", "Sitting Bull", Resources.Load<Sprite>("Textures/Mil1 Portrait"), 0, 1,
 		                   "Leader of the great tribes.", false);
 		currentChars.Add (c);
-		c = new Character ("Military", "Sun Tzu the Tiger", Resources.Load ("Mil3 Portrait") as Sprite, 0, 1,
+		c = new Character ("Military", "Sun Tzu the Tiger", Resources.Load<Sprite> ("Textures/Mil3 Portrait"), 0, 1,
 		                   "Wrote important military tactics in his novel, 'The Art of Roar.'", false);
 		charList.Add(c);
-		c = new Character ("Military", "Artemis the Wolf", Resources.Load ("Mil2 Portrait") as Sprite, 0, 1,
+		c = new Character ("Military", "Artemis the Wolf", Resources.Load<Sprite> ("Textures/Mil2 Portrait"), 0, 1,
 		                   "Master of the bow and arrow.", false);
 		charList.Add (c);
-		c = new Character ("Military", "Zorro the Fox", Resources.Load ("Mil4 Portrait") as Sprite, 0, 1,
+		c = new Character ("Military", "Zorro the Fox", Resources.Load<Sprite> ("Textures/Mil4 Portrait"), 0, 1,
 		                   "The ferocity of this fox will leave foes in fear of furnishing faux fur.", false);
 		charList.Add (c);
 		//SCIENCE CHARACTERS
-		c = new Character ("Science", "Mousie Curie", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Science", "Mousie Curie", Resources.Load<Sprite> ("Textures/Sci1 Portrait"), 0, 1,
 		                   "Won the Swiss Prize in her studies of radiated cheese curds.", false);
 		charList.Add (c);
-		c = new Character ("Science", "Hathaway the Hare", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Science", "Hathaway the Hare", Resources.Load<Sprite> ("Textures/Sci3 Portrait"), 0, 1,
 		                   "This black hat hacker named Hathaway.", false);
 		charList.Add (c);
-		c = new Character ("Science", "Ram Descartes", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Science", "Ram Descartes", Resources.Load<Sprite>("Textures/Sci2 Portrait"), 0, 1,
 		                   "Mathematician and philisophist, most famous statement: If it fits, I sits.", false);
 		currentChars.Add (c);
-		c = new Character ("Science", "Olympia the Owl", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Science", "Olympia the Owl", Resources.Load<Sprite>("Textures/Sci4 Portrait"), 0, 1,
 		                   "A healer of the many.", false);
 		charList.Add (c);
 		//ESPIONAGE CHARACTERS
-		c = new Character ("Espionage", "Margreet the Bat", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Espionage", "Margreet the Bat", Resources.Load<Sprite>("Textures/Esp1 Portrait"), 0, 1,
 		                   "A master of disguise and dancing.", false);
 		currentChars.Add (c);
-		c = new Character ("Espionage", "Pierre the Parrot", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Espionage", "Pierre the Parrot", Resources.Load<Sprite>("Textures/Esp3 Portrait"), 0, 1,
 		                   "Pickpoketing extraordinaire.", false);
 		charList.Add (c);
-		c = new Character ("Espionage", "Roy the Boartender", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Espionage", "Roy the Boartender", Resources.Load<Sprite>("Textures/Esp2 Portrait"), 0, 1,
 		                   "He hears a lot of gossip around the speakeasy.", false);
 		charList.Add (c);
-		c = new Character ("Espionage", "Lucia the Crow", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Espionage", "Lucia the Crow", Resources.Load<Sprite>("Textures/Esp4 Portrait"), 0, 1,
 		                   "A cunning crow that can get around anywhere.", false);
 		charList.Add (c);
 		//DIPLOMACY CHARACTERS
-		c = new Character ("Diplomacy", "Espresso the Dog", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Diplomacy", "Espresso the Dog", Resources.Load<Sprite>("Textures/Dip1 Portrait"), 0, 1,
 		                   "He just wants to talk things out over some good coffee.", false);
 		charList.Add (c);
-		c = new Character ("Diplomacy", "Octavia the Octopus", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Diplomacy", "Octavia the Octopus", Resources.Load<Sprite>("Textures/Dip2 Portrait"), 0, 1,
 		                   "Tangles people up in contracts and paperwork.", false);
 		charList.Add (c);
-		c = new Character ("Diplomacy", "Eisenhower the Elk", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Diplomacy", "Eisenhower the Elk", Resources.Load<Sprite>("Textures/Dip3 Portrait"), 0, 1,
 		                   "A fancy dancy elk.", false);
 		currentChars.Add (c);
-		c = new Character ("Diplomacy", "Masako the Monkey", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Diplomacy", "Masako the Monkey", Resources.Load<Sprite>("Textures/Dip4 Portrait"), 0, 1,
 		                   "This monkey knows a tune that can make a girl swoon.", false);
 		charList.Add (c);
 		//shuffle list
