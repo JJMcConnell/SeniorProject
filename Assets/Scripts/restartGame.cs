@@ -10,10 +10,11 @@ public class restartGame : MonoBehaviour {
 
 
         Data.currentChars.Clear();
-   
+        Data.lastPosition = new Vector3(-26.7f, -15.7f, -1f);
 
-       // Destroy(transform.gameObject);
-        Application.LoadLevel(level);
+
+    // Destroy(transform.gameObject);
+    Application.LoadLevel(level);
     
     }
 

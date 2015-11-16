@@ -4,13 +4,13 @@ using System.Collections;
 public class ventureButtonWinCond : MonoBehaviour {
 	
 
-	public void VentureLoadScene(string level)
+	public void VentureLoadScene()
 	{
 
 
 
 
-		if (Data.dayCounter == 20) {
+		if (Data.dayCounter >= 20) {
 			float resourceSum = 0;
 			resourceSum = Data.militaryResCount + Data.scienceResCount + Data.espionageResCount + Data.diplomacyResCount;
 			float maxSum = -1;
@@ -54,9 +54,9 @@ public class ventureButtonWinCond : MonoBehaviour {
 		}
 
 		else
-			Application.LoadLevel(level);
+            Application.LoadLevel(Data.lastIsland);
 
 
 
-	}
+    }
 }

@@ -111,10 +111,18 @@ public class successText : MonoBehaviour {
 		guiText2.text = names;
 
 
+        //remove characters from CD
+        for (int i = 0; i < Data.onCooldownChars.Count; i++)
+        {
+            Data.onCooldownChars[i].onCooldown = false;
+        }
+        Data.onCooldownChars.Clear();
+
         //add characters to CD
-        for(int i=0; i<Data.activeMissionChars.Count; i++)
+        for (int i=0; i<Data.activeMissionChars.Count; i++)
         {
             Data.activeMissionChars[i].onCooldown = true;
+            Data.onCooldownChars.Add(Data.activeMissionChars[i]);
         }
 
 

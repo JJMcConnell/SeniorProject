@@ -7,7 +7,7 @@ public class boatMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-      //  transform.position = new Vector3(0, 6, 0);
+        transform.position = Data.lastPosition;
     }
 	
 	// Update is called once per frame

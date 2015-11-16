@@ -18,7 +18,7 @@ public class cameraMovement : MonoBehaviour {
     // Use this for initialization
     void Start() {
 
-        //targetPos = transform.position;
+        transform.position = new Vector3(Data.lastPosition.x, Data.lastPosition.y, -10f);
 
     }
 

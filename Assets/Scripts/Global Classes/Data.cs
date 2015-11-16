@@ -15,7 +15,7 @@ public class Data : MonoBehaviour {
 	public static Mission pickedMission;
 	public static List<Character> activeMissionChars = new List<Character>();   //list for characters sent on a mission
 	public static int currentCrewSize;
-    //public static List<Character> onCooldown = new List<Character>();
+    public static List<Character> onCooldownChars = new List<Character>();
 
 	public static float militaryResCount;
 	public static float espionageResCount;
@@ -28,6 +28,7 @@ public class Data : MonoBehaviour {
 	public static bool hitBack;
     public static int currentDifficulty;
     public static string lastIsland;
+    public static Vector3 lastPosition = new Vector3(-26.7f, -15.7f, -1f);
 
     public static bool preserveMilMission;
     public static bool preserveSciMission;
