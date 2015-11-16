@@ -38,9 +38,9 @@ public class missionDescription : MonoBehaviour {
             if (Data.currentChars[i].onCooldown)
             {
                 GameObject.Find(Data.currentChars[i].charName).GetComponent<SpriteRenderer>().color = Color.gray;
+            }
+
         }
-
-
 
     }
 	
