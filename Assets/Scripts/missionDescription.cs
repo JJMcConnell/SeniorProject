@@ -29,20 +29,24 @@ public class missionDescription : MonoBehaviour {
 
 		for (int i = 0; i < Data.charList.Count; i++) {
             GameObject.Find(Data.charList[i].charName).GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/" + Data.charList[i].charName + " Sil");
+            GameObject.Find(Data.charList[i].charName).GetComponent<SpriteRenderer>().color = Color.gray;
         }
 
         for (int i = 0; i < Data.currentChars.Count; i++)
         {
             GameObject.Find(Data.currentChars[i].charName).GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/" + Data.currentChars[i].charName);
+            if (Data.currentChars[i].onCooldown)
+            {
+                GameObject.Find(Data.currentChars[i].charName).GetComponent<SpriteRenderer>().color = Color.gray;
+            }
+
         }
-
-
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-		string remaining = "";
+		//string remaining = "";
 		Text guiText = GameObject.Find("Remaining").GetComponent<Text>();
 		guiText.text = "Characters Needed:\n               " + (Data.pickedMission.squadSize - Data.currentCrewSize);
         if((Data.pickedMission.squadSize - Data.currentCrewSize) == 0)

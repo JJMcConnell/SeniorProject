@@ -43,8 +43,14 @@ public class failText : MonoBehaviour {
             names += Data.activeMissionChars[i].charName + " +" + expGain + "XP\n";
             Data.activeMissionChars[i].setPicked();
 		}
-		
-		guiText2.text = names;
+
+        //add characters to CD
+        for (int i = 0; i < Data.activeMissionChars.Count; i++)
+        {
+            Data.activeMissionChars[i].onCooldown = true;
+        }
+
+        guiText2.text = names;
 
         Text guiText3 = GameObject.Find("FoodReward").GetComponent<Text>();
 

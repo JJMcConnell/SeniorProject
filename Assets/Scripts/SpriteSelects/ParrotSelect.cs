@@ -60,8 +60,11 @@ public class ParrotSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Pierre the Parrot")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

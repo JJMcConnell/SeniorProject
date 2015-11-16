@@ -60,8 +60,11 @@ public class CrowSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Lucia the Crow")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 
