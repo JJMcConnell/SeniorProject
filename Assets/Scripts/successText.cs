@@ -16,9 +16,7 @@ public class successText : MonoBehaviour {
 		
 		Resource reward = Data.pickedMission.rewardRsc;
 		Data.resourceList.Add (reward);
-		for (int i = 0; i<Data.pickedMission.squadSize; i++)
-			Data.activeMissionChars [i].addExperience (500);
-		
+       
 		Text guiText3 = GameObject.Find ("MilReward").GetComponent<Text> ();
 		Text guiText4 = GameObject.Find ("SciReward").GetComponent<Text> ();
 		Text guiText5 = GameObject.Find ("EspReward").GetComponent<Text> ();
@@ -29,26 +27,50 @@ public class successText : MonoBehaviour {
 		guiText5.text = "";
 		guiText6.text = "";
         guiText7.text = "";
-		if(Data.pickedMission.rewardRsc.type == "Military"){
+
+
+        //finds the total level of characters on the mission
+
+
+        float totalLevel = 0;
+        int level;
+        for (int i=0; i<Data.activeMissionChars.Count; i++)
+        {
+            float x = (Data.activeMissionChars[i].experience / 500);
+            level = (int)(1 + x);
+            Debug.Log("Level is: " + level);
+            totalLevel += level;
+        }
+
+
+        //resources are added
+        //if totalLevel of squad exceeds the mission difficulty x squadsize value you gain less resources
+        //this incentivizes sending level appropriate characters on level appropriate missions
+        //sending underleveled characters does not generate addition resources or exp
+        float adjustment = ((Data.adjustedDifficulty * Data.activeMissionChars.Count) / totalLevel);
+        if (adjustment > 1)
+            adjustment = 1;
+
+		if (Data.pickedMission.rewardRsc.type == "Military"){
         type = 1;
-			guiText3.text = "+" + (Data.pickedMission.rewardRsc.quantity +(Data.adjustedDifficulty - 1)*50) + " Military Resources";
-			Data.militaryResCount += Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1)*50;
+			guiText3.text = "+" + ((Data.pickedMission.rewardRsc.quantity +(Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Military Resources";
+			Data.militaryResCount += (Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50) * (adjustment);
 		}
 		if(Data.pickedMission.rewardRsc.type == "Science"){
         type = 2;
-			guiText4.text = "+" + (Data.pickedMission.rewardRsc.quantity +(Data.adjustedDifficulty - 1)*50) + " Science Resources";
-			Data.scienceResCount += Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1)*50;
-		}
+			guiText4.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Science Resources";
+			Data.scienceResCount += (Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50) * (adjustment);
+        }
 		if(Data.pickedMission.rewardRsc.type == "Espionage"){
         type = 3;
-			guiText5.text = "+" + (Data.pickedMission.rewardRsc.quantity +(Data.adjustedDifficulty - 1)*50) + " Espionage Resources";
-			Data.espionageResCount += Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1)*50;
-		}
+			guiText5.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Espionage Resources";
+			Data.espionageResCount += (Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50) * (adjustment);
+        }
 		if(Data.pickedMission.rewardRsc.type == "Diplomacy"){
         type = 4;
-			guiText6.text = "+" + (Data.pickedMission.rewardRsc.quantity +(Data.adjustedDifficulty - 1)*50) + " Diplomacy Resources";
-			Data.diplomacyResCount += Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1)*50;
-		}
+			guiText6.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Diplomacy Resources";
+			Data.diplomacyResCount += (Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50) * (adjustment);
+        }
 
         guiText7.text = "+" + Data.pickedMission.squadSize * 10 + " Food";
         Data.foodResCount += Data.pickedMission.squadSize * 10;
@@ -71,12 +93,19 @@ public class successText : MonoBehaviour {
 			guiText1.text = success + "\nRewards: " + Data.pickedMission.rewardRsc.rscName + "\nNew Character, " + rewardChar.charName +": "+ rewardChar.description;
 		else
 			guiText1.text = success + "\nRewards: " + Data.pickedMission.rewardRsc.rscName;
-		
 
-		Text guiText2 = GameObject.Find ("SquadList").GetComponent<Text> ();
+        //adjusts exp gain of entire squad on mission if sending over leveled characters
+        int expGain;
+        expGain = (int) (100 * (adjustment));
+        for (int i = 0; i < Data.pickedMission.squadSize; i++)
+        {
+            Data.activeMissionChars[i].addExperience(expGain);
+        }
+
+        Text guiText2 = GameObject.Find ("SquadList").GetComponent<Text> ();
 		string names = "";
 		for (int i = 0; i<Data.activeMissionChars.Count; i++) {
-			names += Data.activeMissionChars [i].charName + " +500 XP \n";
+			names += Data.activeMissionChars [i].charName + " +" + expGain +"XP\n";
 			Data.activeMissionChars [i].setPicked ();
 		}
 		guiText2.text = names;

@@ -15,10 +15,10 @@ public class Data : MonoBehaviour {
 	public static Mission pickedMission;
 	public static List<Character> activeMissionChars = new List<Character> ();   //list for characters sent on a mission
 	public static int currentCrewSize;
-	public static int militaryResCount;
-	public static int espionageResCount;
-	public static int diplomacyResCount;
-	public static int scienceResCount;
+	public static float militaryResCount;
+	public static float espionageResCount;
+	public static float diplomacyResCount;
+	public static float scienceResCount;
     public static int foodResCount;
 	public static bool needCharacter;
 	public static int adjustedDifficulty;

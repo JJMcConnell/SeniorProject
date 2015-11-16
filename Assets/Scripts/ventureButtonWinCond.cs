@@ -10,12 +10,12 @@ public class ventureButtonWinCond : MonoBehaviour {
 
 
 
-		if (Data.dayCounter == 16) {
-			int resourceSum = 0;
+		if (Data.dayCounter == 20) {
+			float resourceSum = 0;
 			resourceSum = Data.militaryResCount + Data.scienceResCount + Data.espionageResCount + Data.diplomacyResCount;
-			int maxSum = -1;
+			float maxSum = -1;
 			int type = 1; //1 =  military, 2 = science, 3 = espionage, 4 = diplomacy
-			if (resourceSum < 1000) {
+			if (resourceSum < 2000) {
 				Application.LoadLevel ("NoWin");
 			} else {
 				//you win
