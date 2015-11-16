@@ -9,7 +9,8 @@ public class failText : MonoBehaviour {
 		System.Threading.Thread.Sleep(600);
 		string fail = Data.pickedMission.failDesc;
 		Mission activeMission = Data.pickedMission;
-		Text guiText1 = GameObject.Find("FailText").GetComponent<Text>();
+
+        Text guiText1 = GameObject.Find("FailText").GetComponent<Text>();
 		
 		//guiText1.text = "Success \n" + success + "\n\nRewards: \n" + Data.pickedMission.rewardRsc.rscName;
 
@@ -26,7 +27,17 @@ public class failText : MonoBehaviour {
 		
 		guiText2.text = names;
 
-		if (Data.dayCounter % 2 == 0 && Data.dayCounter != 0)
+        Text guiText3 = GameObject.Find("FoodReward").GetComponent<Text>();
+
+        guiText3.text = "-" + Data.pickedMission.squadSize * 10 + " Food";
+        Data.foodResCount -= Data.pickedMission.squadSize * 10;
+
+        if(Data.foodResCount <= 0)
+        {
+            Application.LoadLevel("NoWin");
+        }
+
+        if (Data.dayCounter % 2 == 0 && Data.dayCounter != 0)
 			Data.needCharacter = true;
 		
 		//at end of displaying messages clear activeMissionChars
