@@ -2768,27 +2768,33 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1770565005}
+  - 224: {fileID: 1770565005}
+  - 222: {fileID: 1770565007}
   - 212: {fileID: 1770565006}
   m_Layer: 5
-  m_Name: New Sprite
+  m_Name: Big Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1770565005
-Transform:
+--- !u!224 &1770565005
+RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1770565004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 282.600006, y: 146.899994, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 50687934}
   m_RootOrder: 17
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 282.600006, y: 146.899994}
+  m_SizeDelta: {x: 15.6800003, y: 15.6800003}
+  m_Pivot: {x: .5, y: .5}
 --- !u!212 &1770565006
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2811,10 +2817,16 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -557344611
+  m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: da711d386263d42ef892a2da64742109, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!222 &1770565007
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770565004}
 --- !u!1001 &1784083379
 Prefab:
   m_ObjectHideFlags: 0

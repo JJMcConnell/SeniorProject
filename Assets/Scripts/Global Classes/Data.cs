@@ -46,13 +46,13 @@ public class Data : MonoBehaviour {
 		c = new Character ("Military", "Sitting Bull", Resources.Load("Mil1 Portrait") as Sprite, 0, 1,
 		                   "Leader of the great tribes.", false);
 		currentChars.Add (c);
-		c = new Character ("Military", "Sun Tzu the Tiger", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Military", "Sun Tzu the Tiger", Resources.Load ("Mil3 Portrait") as Sprite, 0, 1,
 		                   "Wrote important military tactics in his novel, 'The Art of Roar.'", false);
 		charList.Add(c);
-		c = new Character ("Military", "Artemis the Wolf", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Military", "Artemis the Wolf", Resources.Load ("Mil2 Portrait") as Sprite, 0, 1,
 		                   "Master of the bow and arrow.", false);
 		charList.Add (c);
-		c = new Character ("Military", "Zorro the Fox", Resources.Load ("/Portrait.png") as Sprite, 0, 1,
+		c = new Character ("Military", "Zorro the Fox", Resources.Load ("Mil4 Portrait") as Sprite, 0, 1,
 		                   "The ferocity of this fox will leave foes in fear of furnishing faux fur.", false);
 		charList.Add (c);
 		//SCIENCE CHARACTERS

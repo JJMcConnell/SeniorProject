@@ -7,7 +7,7 @@ public class characterDescription : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.Sprite>("Textures/Captain_Portrait2");
         if (Data.characterSelected)
             Data.currentCharDesc.isPicked = false;
         Data.onCrewScene = true;
@@ -39,6 +39,7 @@ public class characterDescription : MonoBehaviour {
         {
             string characterDesc = Data.currentCharDesc.description;
             guiText.text = Data.currentCharDesc.charName + "\n" + characterDesc + "\nExperience: " + Data.currentCharDesc.experience;
+           // GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Data.currentCharDesc.sprite;
 
             for (int i = 0; i < Data.currentChars.Count; i++)
             {
@@ -56,6 +57,8 @@ public class characterDescription : MonoBehaviour {
             guiText.text = "Missions Run: " + (Data.dayCounter - 1) + "\nMilitary Resources: " + Data.militaryResCount 
                 + "\nScience Resources: " + Data.scienceResCount + "\nEspionage Resources: " + Data.espionageResCount 
                 + "\nDiplomacy Resources: " + Data.diplomacyResCount;
+
+            GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Resources.Load<UnityEngine.Sprite>("Textures/Captain_Portrait2");
         }
         
 
