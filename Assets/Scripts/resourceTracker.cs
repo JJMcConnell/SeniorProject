@@ -12,6 +12,7 @@ public class resourceTracker : MonoBehaviour {
 		string s = Data.scienceResCount.ToString();
 		string e = Data.espionageResCount.ToString();
 		string d = Data.diplomacyResCount.ToString();
+        string f = Data.foodResCount.ToString();
         string days = Data.dayCounter.ToString();
 
 		Text guiText1 = GameObject.Find("mtext").GetComponent<Text>();
@@ -25,6 +26,9 @@ public class resourceTracker : MonoBehaviour {
 
 		guiText1 = GameObject.Find("dtext").GetComponent<Text>();
 		guiText1.text = " " + d;
+
+        guiText1 = GameObject.Find("ftext").GetComponent<Text>();
+        guiText1.text = " " + f;
 
         guiText1 = GameObject.Find("DayCounter").GetComponent<Text>();
         guiText1.text = " " + days;

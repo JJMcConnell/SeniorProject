@@ -19,6 +19,7 @@ public class Data : MonoBehaviour {
 	public static int espionageResCount;
 	public static int diplomacyResCount;
 	public static int scienceResCount;
+    public static int foodResCount;
 	public static bool needCharacter;
 	public static int adjustedDifficulty;
 	public static bool hitBack;
@@ -43,7 +44,7 @@ public class Data : MonoBehaviour {
 		//instantiate and add to list all your characters (we probably need to do this for each single one, so copy paste!)
 		Character c;
 		//MILITARY CHARACTERS
-		c = new Character ("Military", "Sitting Bull", Resources.Load("Mil1 Portrait") as Sprite, 0, 1,
+		c = new Character ("Military", "Sitting Bull", Resources.Load<Sprite>("Textures/Mil1 Portrait"), 0, 1,
 		                   "Leader of the great tribes.", false);
 		currentChars.Add (c);
 		c = new Character ("Military", "Sun Tzu the Tiger", Resources.Load ("Mil3 Portrait") as Sprite, 0, 1,

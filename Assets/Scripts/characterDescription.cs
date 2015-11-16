@@ -15,7 +15,7 @@ public class characterDescription : MonoBehaviour {
 
         for (int i = 0; i < Data.charList.Count; i++) {
 			GameObject.Find (Data.charList [i].charName).GetComponent<SpriteRenderer> ().color = Color.gray;
-		}
+        }
 	
 	}
 	
@@ -56,9 +56,9 @@ public class characterDescription : MonoBehaviour {
         {
             guiText.text = "Missions Run: " + (Data.dayCounter - 1) + "\nMilitary Resources: " + Data.militaryResCount 
                 + "\nScience Resources: " + Data.scienceResCount + "\nEspionage Resources: " + Data.espionageResCount 
-                + "\nDiplomacy Resources: " + Data.diplomacyResCount;
+                + "\nDiplomacy Resources: " + Data.diplomacyResCount + "\nFood Resources: " + Data.foodResCount;
 
-            GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("/Textures/Captain_Portrait2");
+            GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/Captain_Portrait2");
         }
         
 
