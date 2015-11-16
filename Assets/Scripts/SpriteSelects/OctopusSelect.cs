@@ -60,8 +60,11 @@ public class OctopusSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Octavia the Octopus")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

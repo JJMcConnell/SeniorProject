@@ -66,8 +66,11 @@ public class BullSelect : MonoBehaviour {
 			int i;
 			for (i = 0; i < Data.currentChars.Count; i++) {
 				if (Data.currentChars [i].charName == "Sitting Bull") {
-					available = true;
-					break;
+                    if(!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
 				}
 			}
 			

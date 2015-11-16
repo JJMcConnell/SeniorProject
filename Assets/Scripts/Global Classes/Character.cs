@@ -10,12 +10,13 @@ public class Character : MonoBehaviour {
 	public int status;        //0 = Dead, 1 = alive, 2 = injured
 	public string description;
 	public bool isPicked;
+    public bool onCooldown;
 
 	public Character() {
 		//empty constructor
 	}
 
-	public Character(string profession, string charName, Sprite sprite, int experience, int status, string description, bool isPicked) {
+	public Character(string profession, string charName, Sprite sprite, int experience, int status, string description, bool isPicked, bool onCooldown) {
 		this.profession = profession;
 		this.charName = charName;
 		this.sprite = sprite;
@@ -23,6 +24,7 @@ public class Character : MonoBehaviour {
 		this.status = status;
 		this.description = description;
 		this.isPicked = isPicked;
+        this.onCooldown = onCooldown;
 	}
 
 	public void setStatus(int status){

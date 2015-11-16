@@ -60,8 +60,11 @@ public class ElkSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Eisenhower the Elk")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

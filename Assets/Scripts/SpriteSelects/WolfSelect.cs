@@ -60,8 +60,11 @@ public class WolfSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Artemis the Wolf")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

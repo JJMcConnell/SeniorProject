@@ -60,8 +60,11 @@ public class FoxSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Zorro the Fox")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

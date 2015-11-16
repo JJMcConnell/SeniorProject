@@ -59,8 +59,11 @@ public class OwlSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Olympia the Owl")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

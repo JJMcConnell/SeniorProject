@@ -60,8 +60,11 @@ public class RamSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Ram Descartes")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

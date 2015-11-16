@@ -60,8 +60,11 @@ public class MouseSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Mousie Curie")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

@@ -60,8 +60,11 @@ public class MonkeySelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Masako the Monkey")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

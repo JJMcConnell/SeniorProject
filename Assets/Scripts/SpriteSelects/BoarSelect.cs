@@ -60,8 +60,11 @@ public class BoarSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Roy the Boartender")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

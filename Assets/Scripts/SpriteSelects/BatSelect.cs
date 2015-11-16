@@ -60,8 +60,11 @@ public class BatSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Margreet the Bat")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

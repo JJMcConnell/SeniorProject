@@ -60,8 +60,11 @@ public class TigerSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Sun Tzu the Tiger")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

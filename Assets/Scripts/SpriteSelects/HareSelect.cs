@@ -60,8 +60,11 @@ public class HareSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Hathaway the Hare")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

@@ -60,8 +60,11 @@ public class DogeSelect : MonoBehaviour {
             {
                 if (Data.currentChars[i].charName == "Espresso the Dog")
                 {
-                    available = true;
-                    break;
+                    if (!Data.currentChars[i].onCooldown)
+                    {
+                        available = true;
+                        break;
+                    }
                 }
             }
 

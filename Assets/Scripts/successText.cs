@@ -110,6 +110,14 @@ public class successText : MonoBehaviour {
 		}
 		guiText2.text = names;
 
+
+        //add characters to CD
+        for(int i=0; i<Data.activeMissionChars.Count; i++)
+        {
+            Data.activeMissionChars[i].onCooldown = true;
+        }
+
+
         Data.pickedMission.isDone = true;
 		//at end of displaying messages clear activeMissionChars
 		Data.activeMissionChars.Clear ();

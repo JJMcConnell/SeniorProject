@@ -3,23 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Data : MonoBehaviour {
-	public static List<Character> charList = new List<Character> ();      //list of available characters
-	public static List<Character> currentChars = new List<Character> ();  //active character list
+	public static List<Character> charList = new List<Character>();      //list of available characters
+	public static List<Character> currentChars = new List<Character>();  //active character list
 	//public static List<Mission> missionList = new List<Mission> ();      //list of available missions
     public static List<Mission> militaryList = new List<Mission>();
     public static List<Mission> scienceList = new List<Mission>();
     public static List<Mission> espionageList = new List<Mission>();
     public static List<Mission> diplomacyList = new List<Mission>();
-    public static List<Resource> resourceList = new List<Resource> ();      //list of available missions
+    public static List<Resource> resourceList = new List<Resource>();      //list of available missions
 	public static int dayCounter;
 	public static Mission pickedMission;
-	public static List<Character> activeMissionChars = new List<Character> ();   //list for characters sent on a mission
+	public static List<Character> activeMissionChars = new List<Character>();   //list for characters sent on a mission
 	public static int currentCrewSize;
+    //public static List<Character> onCooldown = new List<Character>();
+
 	public static float militaryResCount;
 	public static float espionageResCount;
 	public static float diplomacyResCount;
 	public static float scienceResCount;
     public static int foodResCount;
+
 	public static bool needCharacter;
 	public static int adjustedDifficulty;
 	public static bool hitBack;
@@ -45,55 +48,55 @@ public class Data : MonoBehaviour {
 		Character c;
 		//MILITARY CHARACTERS
 		c = new Character ("Military", "Sitting Bull", Resources.Load<Sprite>("Textures/Sitting Bull"), 0, 1,
-		                   "Leader of the great tribes.", false);
+		                   "Leader of the great tribes.", false, false);
 		currentChars.Add (c);
 		c = new Character ("Military", "Sun Tzu the Tiger", Resources.Load<Sprite> ("Textures/Sun Tzu the Tiger Sil"), 0, 1,
-		                   "Wrote important military tactics in his novel, 'The Art of Roar.'", false);
+		                   "Wrote important military tactics in his novel, 'The Art of Roar.'", false, false);
 		charList.Add(c);
 		c = new Character ("Military", "Artemis the Wolf", Resources.Load<Sprite> ("Textures/Artemis the Wolf Sil"), 0, 1,
-		                   "Master of the bow and arrow.", false);
+		                   "Master of the bow and arrow.", false, false);
 		charList.Add (c);
 		c = new Character ("Military", "Zorro the Fox", Resources.Load<Sprite> ("Textures/Zorro the Fox Sil"), 0, 1,
-		                   "The ferocity of this fox will leave foes in fear of furnishing faux fur.", false);
+		                   "The ferocity of this fox will leave foes in fear of furnishing faux fur.", false, false);
 		charList.Add (c);
 		//SCIENCE CHARACTERS
 		c = new Character ("Science", "Mousie Curie", Resources.Load<Sprite> ("Textures/Mousie Curie Sil"), 0, 1,
-		                   "Won the Swiss Prize in her studies of radiated cheese curds.", false);
+		                   "Won the Swiss Prize in her studies of radiated cheese curds.", false, false);
 		charList.Add (c);
 		c = new Character ("Science", "Hathaway the Hare", Resources.Load<Sprite> ("Textures/Hathaway the Hare Sil"), 0, 1,
-		                   "This black hat hacker named Hathaway.", false);
+		                   "This black hat hacker named Hathaway.", false, false);
 		charList.Add (c);
 		c = new Character ("Science", "Ram Descartes", Resources.Load<Sprite>("Textures/Ram Descartes"), 0, 1,
-		                   "Mathematician and philisophist, most famous statement: If it fits, I sits.", false);
+		                   "Mathematician and philisophist, most famous statement: If it fits, I sits.", false, false);
 		currentChars.Add (c);
 		c = new Character ("Science", "Olympia the Owl", Resources.Load<Sprite>("Textures/Olympia the Owl Sil"), 0, 1,
-		                   "A healer of the many.", false);
+		                   "A healer of the many.", false, false);
 		charList.Add (c);
 		//ESPIONAGE CHARACTERS
 		c = new Character ("Espionage", "Margreet the Bat", Resources.Load<Sprite>("Textures/Margreet the Bat"), 0, 1,
-		                   "A master of disguise and dancing.", false);
+		                   "A master of disguise and dancing.", false, false);
 		currentChars.Add (c);
 		c = new Character ("Espionage", "Pierre the Parrot", Resources.Load<Sprite>("Textures/Pierre the Parrot Sil"), 0, 1,
-		                   "Pickpoketing extraordinaire.", false);
+		                   "Pickpoketing extraordinaire.", false, false);
 		charList.Add (c);
 		c = new Character ("Espionage", "Roy the Boartender", Resources.Load<Sprite>("Textures/Roy the Boartender Sil"), 0, 1,
-		                   "He hears a lot of gossip around the speakeasy.", false);
+		                   "He hears a lot of gossip around the speakeasy.", false, false);
 		charList.Add (c);
 		c = new Character ("Espionage", "Lucia the Crow", Resources.Load<Sprite>("Textures/Lucia the Crow Sil"), 0, 1,
-		                   "A cunning crow that can get around anywhere.", false);
+		                   "A cunning crow that can get around anywhere.", false, false);
 		charList.Add (c);
 		//DIPLOMACY CHARACTERS
 		c = new Character ("Diplomacy", "Espresso the Dog", Resources.Load<Sprite>("Textures/Espresso the Dog Sil"), 0, 1,
-		                   "He just wants to talk things out over some good coffee.", false);
+		                   "He just wants to talk things out over some good coffee.", false, false);
 		charList.Add (c);
 		c = new Character ("Diplomacy", "Octavia the Octopus", Resources.Load<Sprite>("Textures/Octavia the Octopus Sil"), 0, 1,
-		                   "Tangles people up in contracts and paperwork.", false);
+		                   "Tangles people up in contracts and paperwork.", false, false);
 		charList.Add (c);
 		c = new Character ("Diplomacy", "Eisenhower the Elk", Resources.Load<Sprite>("Textures/Eisenhower the Elk"), 0, 1,
-		                   "A fancy dancy elk.", false);
+		                   "A fancy dancy elk.", false, false);
 		currentChars.Add (c);
 		c = new Character ("Diplomacy", "Masako the Monkey", Resources.Load<Sprite>("Textures/Masako the Monkey Sil"), 0, 1,
-		                   "This monkey knows a tune that can make a girl swoon.", false);
+		                   "This monkey knows a tune that can make a girl swoon.", false, false);
 		charList.Add (c);
 		//shuffle list
 		charList = ShuffleList (charList);

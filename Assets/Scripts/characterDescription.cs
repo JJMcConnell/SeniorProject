@@ -15,6 +15,7 @@ public class characterDescription : MonoBehaviour {
 
         for (int i = 0; i < Data.charList.Count; i++) {
 			GameObject.Find (Data.charList [i].charName).GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite>("Textures/" + Data.charList[i].charName + " Sil");
+            GameObject.Find (Data.charList [i].charName).GetComponent<SpriteRenderer>().color = Color.gray;
         }
 
         for (int i = 0; i < Data.currentChars.Count; i++)
@@ -47,7 +48,7 @@ public class characterDescription : MonoBehaviour {
         {
             string characterDesc = Data.currentCharDesc.description;
             guiText.text = Data.currentCharDesc.charName + "\n" + characterDesc + "\nExperience: " + Data.currentCharDesc.experience;
-            GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Data.currentCharDesc.sprite;
+            GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/" + Data.currentCharDesc.charName);
 
             for (int i = 0; i < Data.currentChars.Count; i++)
             {
