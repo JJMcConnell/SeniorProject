@@ -8,7 +8,8 @@ public class missionDescription : MonoBehaviour {
 	void Start () {
 
 
-        if(Data.characterSelected)
+
+        if (Data.characterSelected)
 		    Data.currentCharDesc.isPicked = false;    //make sure that the isPicked isn't still flagged from crew menu
         Data.onCrewScene = false;
 
@@ -32,8 +33,15 @@ public class missionDescription : MonoBehaviour {
             GameObject.Find(Data.charList[i].charName).GetComponent<SpriteRenderer>().color = Color.gray;
         }
 
+        int level;
         for (int i = 0; i < Data.currentChars.Count; i++)
         {
+           
+            float x = ((Data.currentChars[i].experience) / 500);
+            level = (int)(1 + x);
+            GameObject.Find(Data.currentChars[i].charName + " lvl").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/Circle" + level);
+
+
             GameObject.Find(Data.currentChars[i].charName).GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/" + Data.currentChars[i].charName);
             if (Data.currentChars[i].onCooldown)
             {
