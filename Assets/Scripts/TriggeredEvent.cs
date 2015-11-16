@@ -5,7 +5,7 @@ public class TriggeredEvent : MonoBehaviour {
 	bool doWindowBadTrigger = false;
 	bool doWindowGoodTrigger = false;
 	bool newCharacter = false;
-	Character rewardChar = null;
+    Character rewardChar = new Character();
 	// Use this for initialization
 	void Start () {
 		if(Data.dayCounter == 6){
@@ -26,10 +26,12 @@ public class TriggeredEvent : MonoBehaviour {
 			newCharacter = true;
 			if (Data.charList.Count > 0) {
 				rewardChar = Data.charList [0];
-				Data.charList.RemoveAt (0);
-				Data.currentChars.Add (rewardChar);
-			}
+				Data.currentChars.Add(Data.charList[0]);
+                Data.charList.RemoveAt(0);
+            }
 		}
+
+        
 	}
 
 

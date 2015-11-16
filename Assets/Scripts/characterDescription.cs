@@ -14,13 +14,18 @@ public class characterDescription : MonoBehaviour {
         Data.hitBack = true;   //the only way to exit the scene is to hit back, so this works here.
 
         for (int i = 0; i < Data.charList.Count; i++) {
-			GameObject.Find (Data.charList [i].charName).GetComponent<SpriteRenderer> ().color = Color.gray;
+			GameObject.Find (Data.charList [i].charName).GetComponent<SpriteRenderer> ().sprite = Resources.Load<Sprite>("Textures/" + Data.charList[i].charName + " Sil");
+        }
+
+        for (int i = 0; i < Data.currentChars.Count; i++)
+        {
+            GameObject.Find(Data.currentChars[i].charName).GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/" + Data.currentChars[i].charName);
         }
 
 
 
-	
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {

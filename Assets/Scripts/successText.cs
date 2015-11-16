@@ -7,7 +7,7 @@ public class successText : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		System.Threading.Thread.Sleep(600);
-		Character rewardChar = null;
+		Character rewardChar = new Character();
 		string success = Data.pickedMission.successDesc;
 		Mission activeMission = Data.pickedMission;
 		Text guiText1 = GameObject.Find("SuccessText").GetComponent<Text>();
@@ -85,9 +85,9 @@ public class successText : MonoBehaviour {
 			if(Data.charList.Count > 0){
 				addChar = true;
 				rewardChar = Data.charList[0];
-				Data.charList.RemoveAt(0);
 				Data.currentChars.Add (rewardChar);
-			}
+                Data.charList.RemoveAt(0);
+            }
 		}
 		if(addChar)
 			guiText1.text = success + "\nRewards: " + Data.pickedMission.rewardRsc.rscName + "\nNew Character, " + rewardChar.charName +": "+ rewardChar.description;

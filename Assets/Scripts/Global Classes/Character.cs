@@ -39,4 +39,5 @@ public class Character : MonoBehaviour {
 		else
 			this.isPicked = true;
 	}
+
 }
