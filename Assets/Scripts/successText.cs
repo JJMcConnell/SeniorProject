@@ -23,10 +23,12 @@ public class successText : MonoBehaviour {
 		Text guiText4 = GameObject.Find ("SciReward").GetComponent<Text> ();
 		Text guiText5 = GameObject.Find ("EspReward").GetComponent<Text> ();
 		Text guiText6 = GameObject.Find ("DipReward").GetComponent<Text> ();
-		guiText3.text = "";
+        Text guiText7 = GameObject.Find("FoodReward").GetComponent<Text>();
+        guiText3.text = "";
 		guiText4.text = "";
 		guiText5.text = "";
 		guiText6.text = "";
+        guiText7.text = "";
 		if(Data.pickedMission.rewardRsc.type == "Military"){
         type = 1;
 			guiText3.text = "+" + (Data.pickedMission.rewardRsc.quantity +(Data.adjustedDifficulty - 1)*50) + " Military Resources";
@@ -48,7 +50,10 @@ public class successText : MonoBehaviour {
 			Data.diplomacyResCount += Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1)*50;
 		}
 
-		bool addChar = false;
+        guiText7.text = "+" + Data.pickedMission.squadSize * 10 + " Food";
+        Data.foodResCount += Data.pickedMission.squadSize * 10;
+
+        bool addChar = false;
 
 		//grant character if it's a third day and successful
 		//do rewardChar method

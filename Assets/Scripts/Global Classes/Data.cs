@@ -359,6 +359,7 @@ public class Data : MonoBehaviour {
 		scienceResCount = 0;
 		espionageResCount = 0;
 		diplomacyResCount = 0;
+        foodResCount = 40;
 		adjustedDifficulty = 0;
 		needCharacter = false;
         preserveMilMission = false;
