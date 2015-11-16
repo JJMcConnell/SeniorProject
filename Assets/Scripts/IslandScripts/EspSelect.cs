@@ -8,7 +8,7 @@ public class EspSelect : MonoBehaviour
 
     public void LoadScene(string level)
     {
-
+        Data.noMissions = false;
         System.Collections.Generic.List<Mission> tempList = new System.Collections.Generic.List<Mission>();
 
         for (int i = 0; i < Data.espionageList.Count; i++)

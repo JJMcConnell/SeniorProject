@@ -39,6 +39,8 @@ public class Data : MonoBehaviour {
     public static Mission lastEspMission;
     public static Mission lastDipMission;
 
+    public static bool fromIsland;
+    public static bool noMissions;
 	public static bool onCrewScene;
 	public static Character currentCharDesc;
     public static bool characterSelected;
@@ -368,8 +370,12 @@ public class Data : MonoBehaviour {
 		needCharacter = false;
         preserveMilMission = false;
         preserveSciMission = false;
+        preserveEspMission = false;
+        preserveDipMission = false;
 		onCrewScene = false;
         characterSelected = false;
+        fromIsland = false;
+        noMissions = true;
         //this allows it to persist (don't delete please)
         DontDestroyOnLoad (transform.gameObject);
 	}

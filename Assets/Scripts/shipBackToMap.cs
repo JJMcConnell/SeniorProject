@@ -9,8 +9,8 @@ public class shipBackToMap : MonoBehaviour
     public void LoadMap(string level)
     {
         Data.hitBack = true;
-
-        if(Data.preserveMilMission)
+        Data.fromIsland = false;
+        if (Data.preserveMilMission)
             Data.lastMilMission.isListed = false;
         if(Data.preserveSciMission)
             Data.lastSciMission.isListed = false;

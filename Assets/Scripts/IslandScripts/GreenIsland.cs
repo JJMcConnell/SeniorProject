@@ -8,6 +8,8 @@ public class GreenIsland : MonoBehaviour
     void Start()
     {
 
+        Data.fromIsland = true;
+
         Data.currentDifficulty = 2;
         Debug.Log("The current mission difficulty is " + Data.currentDifficulty);
 	

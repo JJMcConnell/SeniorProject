@@ -12,9 +12,11 @@ public class successText : MonoBehaviour {
 		Mission activeMission = Data.pickedMission;
 		Text guiText1 = GameObject.Find("SuccessText").GetComponent<Text>();
         int type = 0;
-		//guiText1.text = "Success \n" + success + "\n\nRewards: \n" + Data.pickedMission.rewardRsc.rscName;
-		
-		Resource reward = Data.pickedMission.rewardRsc;
+        //guiText1.text = "Success \n" + success + "\n\nRewards: \n" + Data.pickedMission.rewardRsc.rscName;
+
+        Data.noMissions = true;
+
+        Resource reward = Data.pickedMission.rewardRsc;
 		Data.resourceList.Add (reward);
        
 		Text guiText3 = GameObject.Find ("MilReward").GetComponent<Text> ();

@@ -8,6 +8,8 @@ public class IceIsland : MonoBehaviour
     void Start()
     {
 
+        Data.fromIsland = true;
+
         Data.currentDifficulty = 3;
         Debug.Log("The current mission difficulty is " + Data.currentDifficulty);
 

@@ -10,6 +10,9 @@ public class failText : MonoBehaviour {
 		string fail = Data.pickedMission.failDesc;
 		Mission activeMission = Data.pickedMission;
 
+        Data.noMissions = true;
+
+
         Text guiText1 = GameObject.Find("FailText").GetComponent<Text>();
 		
 		//guiText1.text = "Success \n" + success + "\n\nRewards: \n" + Data.pickedMission.rewardRsc.rscName;

@@ -7,6 +7,7 @@ public class BeachIsland : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Data.fromIsland = true;
 
         Data.currentDifficulty = 1;
         Debug.Log("The current mission difficulty is " + Data.currentDifficulty);
