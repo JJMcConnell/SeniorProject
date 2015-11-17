@@ -4,6 +4,7 @@ using System.Collections;
 public class TriggeredEvent : MonoBehaviour {
 	bool doWindowBadTrigger = false;
 	bool doWindowGoodTrigger = false;
+	int badTriggerType;
 	bool newCharacter = false;
     Character rewardChar = new Character();
 	// Use this for initialization
@@ -11,15 +12,26 @@ public class TriggeredEvent : MonoBehaviour {
 		if(Data.dayCounter == 6){
 			doWindowBadTrigger = true;
 			//we take away gold 
-			if(Data.diplomacyResCount > 100){
-				Data.diplomacyResCount -=100;
+			switch (badTriggerType) {
+			case 1:
+				Data.militaryResCount -= 100;
+				break;
+			case 2:
+				Data.scienceResCount -= 100;
+				break;
+			case 3:
+				Data.espionageResCount -= 100;
+				break;
+			case 4:
+				Data.diplomacyResCount -= 100;
+				break;
 			}
 		}
 
 		if (Data.dayCounter == 12) {
 			doWindowGoodTrigger = true;
 			//we add a fish 
-			Data.militaryResCount +=100;
+			Data.foodResCount +=50;
 		}
 
 		if ((Data.dayCounter % 2 == 0 && Data.dayCounter != 0) && Data.charList.Count > 0 && Data.hitBack == false) {
@@ -44,7 +56,46 @@ public class TriggeredEvent : MonoBehaviour {
 	}
 
 	void DoWindowBad(int windowID) {
+
+		float maxSum = -1;
+		int type = 1; //1 =  military, 2 = science, 3 = espionage, 4 = diplomacy
+
+			//you win
+			if (maxSum < Data.militaryResCount) {
+				maxSum = Data.militaryResCount;
+			}
+			if (maxSum < Data.scienceResCount) {
+				maxSum = Data.scienceResCount;
+				type = 2;
+			}
+			if (maxSum < Data.espionageResCount) {
+				maxSum = Data.espionageResCount;
+				type = 3;
+			}
+			if (maxSum < Data.diplomacyResCount) {
+				maxSum = Data.diplomacyResCount;
+				type = 4;
+			}
+			
+			switch (type) {
+			case 1:
+			GUILayout.Label("As you wake on the sixth day, you see that a large chest of weapons has disappeared from the holds below deck. Perhaps you should post guards to watch for pesky theives in the night...");
+			badTriggerType = 1;
+				break;
+			case 2:
+			GUILayout.Label("As you wake on the sixth day, you see that a chest of chemisty supplies has disappeared from the holds below deck. Perhaps you should post guards to watch for pesky theives in the night...");
+			badTriggerType = 2;
+				break;
+			case 3:
+			GUILayout.Label("As you wake on the sixth day, you see that you are missing lock picking kits and daggers from the holds below deck. Perhaps you should post guards to watch for pesky theives in the night...");
+			badTriggerType = 3;
+				break;
+			case 4:
 			GUILayout.Label("As you wake on the sixth day, you see that a large coffer of gold has disappeared from the holds below deck. Perhaps you should post guards to watch for pesky theives in the night...");
+			badTriggerType = 4;
+				break;
+			}
+
 			if (GUI.Button (new Rect (20, 160, 200, 20), "Accept")) {
 				doWindowBadTrigger = false;
 			} 
