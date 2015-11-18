@@ -98,7 +98,7 @@ public class successText : MonoBehaviour {
 
         //adjusts exp gain of entire squad on mission if sending over leveled characters
         int expGain;
-        expGain = (int) (100 * (adjustment));
+        expGain = (int) (200 * (adjustment));
         for (int i = 0; i < Data.pickedMission.squadSize; i++)
         {
             Data.activeMissionChars[i].addExperience(expGain);

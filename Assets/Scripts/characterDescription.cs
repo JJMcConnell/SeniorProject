@@ -47,7 +47,9 @@ public class characterDescription : MonoBehaviour {
         if (Data.characterSelected)
         {
             string characterDesc = Data.currentCharDesc.description;
-            guiText.text = Data.currentCharDesc.charName + "\n" + characterDesc + "\nExperience: " + Data.currentCharDesc.experience;
+			float x = ((Data.currentCharDesc.experience) / 500);
+			int charLevel = (int)(1 + x);
+            guiText.text = Data.currentCharDesc.charName + "\n" + characterDesc + "\nCharacter Level: " + charLevel + "\nExperience needed for next Level: " + ((float)charLevel*500 - Data.currentCharDesc.experience);
             GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/" + Data.currentCharDesc.charName);
 
             for (int i = 0; i < Data.currentChars.Count; i++)
