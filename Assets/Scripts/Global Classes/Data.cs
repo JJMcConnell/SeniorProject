@@ -142,7 +142,7 @@ public class Data : MonoBehaviour {
 		Resource d3 = new Resource ("Favor of the locals", "Diplomacy", 100);
 		Resource d4 = new Resource ("Bountiful bounty", "Diplomacy", 100);
 		Resource d5 = new Resource ("Lumber", "Diplomacy", 100);
-		Resource d6 = new Resource ("Curency", "Diplomacy", 100);
+		Resource d6 = new Resource ("Currency", "Diplomacy", 100);
 		Resource d7 = new Resource ("Gifts galore!", "Diplomacy", 100);
 		Resource d8 = new Resource ("Swords and knives and other sharp things", "Diplomacy", 100);
 
