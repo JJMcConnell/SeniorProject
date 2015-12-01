@@ -9,6 +9,8 @@ public class TriggeredEvent : MonoBehaviour {
     Character rewardChar = new Character();
 	// Use this for initialization
 	void Start () {
+
+       
 		if(Data.dayCounter == 6){
 			doWindowBadTrigger = true;
 			//we take away gold 
@@ -47,7 +49,6 @@ public class TriggeredEvent : MonoBehaviour {
 	}
 
 
-
 	void DoWindowGood(int windowID) {
 		GUILayout.Label("The day breaks with particularly rough seas. The large waves batter the ship, and your beleaguered crew is soaked with the spray. But it seems every cloud has a silver lining, as a rogue wave washes a large fish onto the deck. Your crew will have food for days to come!");
 		if (GUI.Button (new Rect (20, 160, 200, 20), "Accept")) {
@@ -79,11 +80,11 @@ public class TriggeredEvent : MonoBehaviour {
 			
 			switch (type) {
 			case 1:
-			GUILayout.Label("As you wake on the sixth day, you see that a large chest of weapons has disappeared from the holds below deck. Perhaps you should post guards to watch for pesky theives in the night...");
+			GUILayout.Label("As you wake on the sixth day, you see that a large chest of steel has disappeared from the holds below deck. Perhaps you should post guards to watch for pesky theives in the night...");
 			badTriggerType = 1;
 				break;
 			case 2:
-			GUILayout.Label("As you wake on the sixth day, you see that a chest of chemisty supplies has disappeared from the holds below deck. Perhaps you should post guards to watch for pesky theives in the night...");
+			GUILayout.Label("As you wake on the sixth day, you see that a chest of crystals has disappeared from the holds below deck. Perhaps you should post guards to watch for pesky theives in the night...");
 			badTriggerType = 2;
 				break;
 			case 3:
@@ -109,8 +110,8 @@ public class TriggeredEvent : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		//doWindow0 = GUI.Toggle(new Rect(10, 10, 100, 20), doWindow0, "Window 0");
-		if (doWindowBadTrigger && !(Data.hitBack)) {
+        //doWindow0 = GUI.Toggle(new Rect(10, 10, 100, 20), doWindow0, "Window 0");
+        if (doWindowBadTrigger && !(Data.hitBack)) {
 			GUI.Window (0, new Rect (300, 100, 250, 200), DoWindowBad, "OH NO!");
 		}
 		if (doWindowGoodTrigger && !(Data.hitBack)) {

@@ -16,6 +16,7 @@ public class Data : MonoBehaviour {
 	public static List<Character> activeMissionChars = new List<Character>();   //list for characters sent on a mission
 	public static int currentCrewSize;
     public static List<Character> onCooldownChars = new List<Character>();
+    public static string miscRewards = "";
 
 	public static float militaryResCount;
 	public static float espionageResCount;
@@ -27,7 +28,7 @@ public class Data : MonoBehaviour {
 	public static int adjustedDifficulty;
 	public static bool hitBack;
     public static int currentDifficulty;
-    public static string lastIsland;
+    public static string lastIsland ="";
     public static Vector3 lastPosition = new Vector3(-26.7f, -15.7f, -1f);
 
     public static bool preserveMilMission;
@@ -70,7 +71,7 @@ public class Data : MonoBehaviour {
 		                   "This black hat hacker named Hathaway.", false, false);
 		charList.Add (c);
 		c = new Character ("Science", "Ram Descartes", Resources.Load<Sprite>("Textures/Ram Descartes"), 0, 1,
-		                   "Mathematician and philisophist, most famous statement: If it fits, I sits.", false, false);
+                           "Mathematician and Philosopher, most famous statement: If it fits, I sits.", false, false);
 		currentChars.Add (c);
 		c = new Character ("Science", "Olympia the Owl", Resources.Load<Sprite>("Textures/Olympia the Owl Sil"), 0, 1,
 		                   "A healer of the many.", false, false);
@@ -359,7 +360,7 @@ public class Data : MonoBehaviour {
 						"Despite your best efforts, the young man is flustered and delivers your lines with poor timing and ends up running away.",
 						2, "Diplomacy", "Science", "Military", "Espionage", 40, 2, "Diplomacy", d8, "None", false, false);
         diplomacyList.Add (m);
-
+        hitBack = false;
 		dayCounter = 1;
 		militaryResCount = 0;
 		scienceResCount = 0;

@@ -55,22 +55,22 @@ public class successText : MonoBehaviour {
 
 		if (Data.pickedMission.rewardRsc.type == "Military"){
         type = 1;
-			guiText3.text = "+" + ((Data.pickedMission.rewardRsc.quantity +(Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Military Resources";
+			guiText3.text = "+" + ((Data.pickedMission.rewardRsc.quantity +(Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Steal Beams";
 			Data.militaryResCount += (Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50) * (adjustment);
 		}
 		if(Data.pickedMission.rewardRsc.type == "Science"){
         type = 2;
-			guiText4.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Science Resources";
+			guiText4.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Crystals";
 			Data.scienceResCount += (Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50) * (adjustment);
         }
 		if(Data.pickedMission.rewardRsc.type == "Espionage"){
         type = 3;
-			guiText5.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Espionage Resources";
+			guiText5.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Spy Equipment Materials";
 			Data.espionageResCount += (Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50) * (adjustment);
         }
 		if(Data.pickedMission.rewardRsc.type == "Diplomacy"){
         type = 4;
-			guiText6.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Diplomacy Resources";
+			guiText6.text = "+" + ((Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50)) * (adjustment) + " Capital";
 			Data.diplomacyResCount += (Data.pickedMission.rewardRsc.quantity + (Data.adjustedDifficulty - 1) * 50) * (adjustment);
         }
 
@@ -91,10 +91,16 @@ public class successText : MonoBehaviour {
                 Data.charList.RemoveAt(0);
             }
 		}
-		if(addChar)
-			guiText1.text = success + "\nRewards: " + Data.pickedMission.rewardRsc.rscName + "\nNew Character, " + rewardChar.charName +": "+ rewardChar.description;
-		else
-			guiText1.text = success + "\nRewards: " + Data.pickedMission.rewardRsc.rscName;
+        if (addChar)
+        {
+            guiText1.text = success + "\nRewards: " + Data.pickedMission.rewardRsc.rscName + "\nNew Character, " + rewardChar.charName + ": " + rewardChar.description;
+            Data.miscRewards += Data.pickedMission.rewardRsc.rscName + ", ";
+        }
+        else
+        {
+            guiText1.text = success + "\nRewards: " + Data.pickedMission.rewardRsc.rscName;
+            Data.miscRewards += Data.pickedMission.rewardRsc.rscName + ", ";
+        }
 
         //adjusts exp gain of entire squad on mission if sending over leveled characters
         int expGain;

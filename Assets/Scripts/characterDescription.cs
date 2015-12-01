@@ -49,7 +49,7 @@ public class characterDescription : MonoBehaviour {
             string characterDesc = Data.currentCharDesc.description;
 			float x = ((Data.currentCharDesc.experience) / 500);
 			int charLevel = (int)(1 + x);
-            guiText.text = Data.currentCharDesc.charName + "\n" + characterDesc + "\nCharacter Level: " + charLevel + "\nExperience needed for next Level: " + ((float)charLevel*500 - Data.currentCharDesc.experience);
+            guiText.text = "\n\n\n" + Data.currentCharDesc.charName  + "\nCharacter Level: " + charLevel + "\nExperience needed for next Level: " + ((float)charLevel*500 - Data.currentCharDesc.experience)+ "\nDescription: " + characterDesc;
             GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/" + Data.currentCharDesc.charName);
 
             for (int i = 0; i < Data.currentChars.Count; i++)
@@ -65,9 +65,9 @@ public class characterDescription : MonoBehaviour {
 
         else
         {
-            guiText.text = "Missions Run: " + (Data.dayCounter - 1) + "\nMilitary Resources: " + Data.militaryResCount 
-                + "\nScience Resources: " + Data.scienceResCount + "\nEspionage Resources: " + Data.espionageResCount 
-                + "\nDiplomacy Resources: " + Data.diplomacyResCount + "\nFood Resources: " + Data.foodResCount;
+            guiText.text = "Missions Run: " + (Data.dayCounter - 1) + "\nSteel Beams: " + Data.militaryResCount 
+                + "\nCrystals: " + Data.scienceResCount + "\nSpy Equipment Materials: " + Data.espionageResCount 
+                + "\nCapital: " + Data.diplomacyResCount + "\nFood Reserves: " + Data.foodResCount +"\n\nMiscellaneous Rewards: " + Data.miscRewards;
 
             GameObject.Find("Big Image").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Textures/Captain_Portrait2");
         }
