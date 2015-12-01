@@ -575,7 +575,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 'Restart Game
+
+'
 --- !u!222 &391744783
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1820,7 +1822,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 362, y: 216}
+  m_AnchoredPosition: {x: -349.5, y: 225.600006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1839669319
