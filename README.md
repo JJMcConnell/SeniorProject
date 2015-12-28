@@ -13,7 +13,7 @@ Maro Fortuna is a strategy adventure game styled like a choose-your-own-adventur
 
 ## A few screenshots from the game 
 
-![alt text](https://github.com/JJMcConnell/SeniorProject/blob/master/Screen%20Shots/MaroNew1.PNG "Main map")
+![alt text](https://github.com/JJMcConnell/SeniorProject/blob/master/Screen%20Shots/MainMap.PNG "Main map")
 
 ![alt text](https://github.com/JJMcConnell/SeniorProject/blob/master/Screen%20Shots/MissionSuccessScreen.PNG "Mission success screen") 
 
