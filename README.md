@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/JJMcConnell/SeniorProject/blob/master/Assets/Resources/Textures/Captain_Portrait2.png "The Captain") 
 
-Continuation of a game [Craig Williams](https://github.com/craigwilliams9992) and I began as a part of a larger group in an AI for computer games class at UF. We decided to continue our work on the game as our senior project under the guidance of our professor. The game is developed in C# using the Unity game engine. 
+Continuation of a game [Craig Williams](https://github.com/CraigRWilliams) and I began as a part of a larger group in an AI for computer games class at UF. We decided to continue our work on the game as our senior project under the guidance of our professor. The game is developed in C# using the Unity game engine. 
 
 ======
 ## Maro Fortuna
